@@ -1,13 +1,13 @@
-#Installing CollectionSpace 4.1 on ubuntu 14.04 LTS
+#Installing CollectionSpace 4.1 on Ubuntu 14.04 LTS (Trusty Tahr)
 
 ##System Requirement for CollectionSpace 4.1
-* PostreSQL 9.1
-* JDK 7 (Java SE 1.7) (CollectionSpace 3.2.1 or higher.)
-* Ant 1.8.2 or higher
-* Maven 3.0
-* ImageMagick 6.0
+* PostreSQL 9.1 -> PostgreSQL 9.1 or later is required and the most current stable production version is recommended
+* [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Java SE 1.7)
+* [Ant](http://ant.apache.org/bindownload.cgi) 1.8.2 or higher
+* [Maven](http://maven.apache.org/download.cgi) 3.0
+* [ImageMagick](http://www.imagemagick.org/) 6.0
 * Ftp client (already install 14.04)
-* git
+* [git](https://github.com/)
 * Gzip or anything to unzip (already install 14.04)
 
 ##Installing first requirements
@@ -16,8 +16,21 @@ sudo apt-get update && sudo apt-get upgrade
 ```
 
 ```Shell
-apt-get git install ant maven imagemagick ftp
+sudo apt-get git install ant maven imagemagick ftp
 ```
+###Testing if imagemagick is working
+```Shell
+convert logo: logo.gif
+identify logo.gif
+display
+```
+###Version check
+```Shell
+ant -version
+java -version
+
+```
+
 
 ##Installing Java SE JFK 1.7.x
 
