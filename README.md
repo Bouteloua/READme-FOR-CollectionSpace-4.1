@@ -21,16 +21,16 @@ sudo apt-get git install ant maven imagemagick ftp
 
 ##Installing Java SE JFK 1.7.x
 
-* Download Java SE 7 JDK [oracle.com](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* Unzip tar.gz file [replace FILENAME with the file you downloaded]
+* Download Java SE 7 JDK from [oracle.com](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* Unzip tar.gz file [replace FILENAME with the file you downloaded]*.
   ```Shell
   tar -zxvf FILENAME.tar.gz
   ```
-* Create a JDK directory to /usr/lib
+* Create a JDK directory to /usr/lib*.
   ```Shell
   sudo mkdir -p /usr/lib/jvm
   ```
-* Move to the JDK directory to /usr/lib [replace FILENAME with the file you downloaded]
+* Move to the JDK directory to /usr/lib [replace FILENAME with the file you downloaded]*.
   ```Shell
   sudo mv FILENAME/ /usr/lib/jvm/
   ```
