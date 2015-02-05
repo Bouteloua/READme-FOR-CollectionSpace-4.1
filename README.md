@@ -66,7 +66,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 24.75-b04, mixed mode)
   * OpenJDK
 
   * Run and pick the right version:
-```
+```Shell
 sudo update-alternatives --config java
 ```
 
