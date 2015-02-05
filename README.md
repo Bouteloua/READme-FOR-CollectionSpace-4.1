@@ -164,7 +164,7 @@ sudo apt-get git install ant maven imagemagick ftp
 sudo service postgresql restart
 ```
 
-##Time to double Java version again check
+##Time to double check Java for any changes
 * Java like to default to OpenJDK with some loads
 * Check Java version
 ```Shell
