@@ -177,4 +177,4 @@ If you see this it's time to load Collectionspace
   Java HotSpot(TM) 64-Bit Server VM (build 24.75-b04, mixed mode)
 ```
 
-Much of the information is copy and/or modified from [CollectionSpace](http://wiki.collectionspace.org/display/DOC/System+Requirements)
+Much of the information is copied and/or modified from [CollectionSpace](http://wiki.collectionspace.org/display/DOC/System+Requirements)
