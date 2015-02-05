@@ -1,16 +1,16 @@
-Installing systems
+#Installing systems
 
-Installing CollectionSpace 4.1 on ubuntu 14.04 LTS
+##Installing CollectionSpace 4.1 on ubuntu 14.04 LTS
 
-System Requirement for CollectionSpace 4.1
-PostreSQL 9.1
-JDK 7 (Java SE 1.7) (CollectionSpace 3.2.1 or higher.)
-Ant 1.8.2 or higher
-Maven 3.0
-ImageMagick 6.0
-FTP client (already install 14.04)
-GIT
-Gzip or anything to unzip (already install 14.04)
+###System Requirement for CollectionSpace 4.1
+* PostreSQL 9.1
+* JDK 7 (Java SE 1.7) (CollectionSpace 3.2.1 or higher.)
+* Ant 1.8.2 or higher
+* Maven 3.0
+* ImageMagick 6.0
+* FTP client (already install 14.04)
+* GIT
+* Gzip or anything to unzip (already install 14.04)
 
 ################################################################################
 Downloading and installing JAVA:
