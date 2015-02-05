@@ -6,8 +6,8 @@
 * Ant 1.8.2 or higher
 * Maven 3.0
 * ImageMagick 6.0
-* FTP client (already install 14.04)
-* GIT
+* Ftp client (already install 14.04)
+* git
 * Gzip or anything to unzip (already install 14.04)
 
 ##Installing first requirements
@@ -18,8 +18,9 @@ sudo apt-get update && sudo apt-get upgrade
 ```Shell
 apt-get git install ant maven imagemagick ftp
 ```
-##JAVA:
-________________________________________________________________________________
+
+##Installing Java SE JFK 1.7.x
+
 1) Download Java SE Development Kit 7u75
     $-> wget http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-linux-x64.tar.gz
 2) Unzip tar.gz file
