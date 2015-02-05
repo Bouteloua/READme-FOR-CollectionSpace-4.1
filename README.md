@@ -11,12 +11,13 @@
 * Gzip or anything to unzip (already install 14.04)
 
 ##Installing first requirements
-'''
+```Shell
 sudo apt-get update && sudo apt-get upgrade
-'''
-'''
+```
+
+```Shell
 apt-get git install ant maven imagemagick ftp
-'''
+```
 ##JAVA:
 ________________________________________________________________________________
 1) Download Java SE Development Kit 7u75
