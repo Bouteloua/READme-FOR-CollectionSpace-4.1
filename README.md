@@ -54,18 +54,18 @@ sudo apt-get git install ant maven imagemagick ftp
 ```
   java -version
 ```
-** You should see something simpler to this output
+* You should see something simpler to this output
 ```
 java version "1.7.0_75"
 Java(TM) SE Runtime Environment (build 1.7.0_75-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 24.75-b04, mixed mode)
 ```
 
-** If you anything like you need fix it:
-*** java version "1.6..." (or anything else earlier than 1.7)
-*** OpenJDK
+ * If you anything like you need fix it:
+  * java version "1.6..." (or anything else earlier than 1.7)
+  * OpenJDK
 
-*** Run and pick the right version:
+  * Run and pick the right version:
 ```
 sudo update-alternatives --config java
 ```
