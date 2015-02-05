@@ -25,7 +25,7 @@ sudo apt-get git install ant maven imagemagick ftp
 * Unzip tar.gz file [replace FILENAME with the file you downloaded]
 
 ```Shell
-  tar -zxvf __FILENAME__.tar.gz
+  tar -zxvf FILENAME.tar.gz
 ```
 * Create a jvm directory to /usr/lib
 
@@ -35,20 +35,20 @@ sudo apt-get git install ant maven imagemagick ftp
 * Move to the jvm directory to /usr/lib [replace FILENAME with your filename]
 
 ```Shell
-  sudo mv **FILENAME**/ /usr/lib/jvm/
+  sudo mv FILENAME/ /usr/lib/jvm/
 ```
 * Installing java: This will assign Oracle JDK a priority of 1, which means that installing other JDKs will replace it as the default. Be sure to use a higher priority if you want Oracle JDK to remain the default.[replace FILENAME with your filename]
 ```Shell
-  sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/**FILENAME**/bin/java" 1
-  sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/**FILENAME**/bin/javac" 1
-  sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/**FILENAME**/bin/javaws" 1
+  sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/FILENAME/bin/java" 1
+  sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/FILENAME/bin/javac" 1
+  sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/FILENAME/bin/javaws" 1
 ```
 * Correct the file ownership and the permissions of the executables [replace FILENAME with your filename]
 ```Shell
   sudo chmod a+x /usr/bin/java
   sudo chmod a+x /usr/bin/javac
   sudo chmod a+x /usr/bin/javaws
-  sudo chown -R root:root /usr/lib/jvm/**FILENAME**
+  sudo chown -R root:root /usr/lib/jvm/FILENAME
 ```
 * Double check if using the right version
 
