@@ -25,7 +25,7 @@ sudo apt-get git install ant maven imagemagick ftp
 * Unzip tar.gz file [replace FILENAME with the file you downloaded]
 
 ```Shell
-  tar -zxvf **FILENAME**.tar.gz
+  tar -zxvf __FILENAME__.tar.gz
 ```
 * Create a jvm directory to /usr/lib
 
