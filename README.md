@@ -27,17 +27,50 @@ sudo apt-get git install ant maven imagemagick ftp
   ```Shell
   tar -zxvf FILENAME.tar.gz
   ```
-* Create a JDK directory to /usr/lib
+* Create a jvm directory to /usr/lib
 
   ```Shell
   sudo mkdir -p /usr/lib/jvm
   ```
-* Move to the JDK directory to /usr/lib [replace FILENAME with the file you downloaded]
+* Move to the jvm directory to /usr/lib [replace FILENAME with your filename]
 
   ```Shell
   sudo mv FILENAME/ /usr/lib/jvm/
   ```
-5) run to install:
+* Installing java: This will assign Oracle JDK a priority of 1, which means that installing other JDKs will replace it as the default. Be sure to use a higher priority if you want Oracle JDK to remain the default.[replace FILENAME with your filename]
+```Shell
+  sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/FILENAME/bin/java" 1
+  sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/FILENAME/bin/javac" 1
+  sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/FILENAME/bin/javaws" 1
+```
+* Correct the file ownership and the permissions of the executables [replace FILENAME with your filename]
+```Shell
+  sudo chmod a+x /usr/bin/java
+  sudo chmod a+x /usr/bin/javac
+  sudo chmod a+x /usr/bin/javaws
+  sudo chown -R root:root /usr/lib/jvm/FILENAME
+```
+* Double check if using the right version
+```
+  java -version
+```
+** You should see something simpler to this output
+```
+java version "1.7.0_75"
+Java(TM) SE Runtime Environment (build 1.7.0_75-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 24.75-b04, mixed mode)
+```
+
+** If you anything like you need fix it:
+*** java version "1.6..." (or anything else earlier than 1.7)
+*** OpenJDK
+
+*** Run and pick the right version:
+```
+sudo update-alternatives --config java
+```
+
+
 This will assign Oracle JDK a priority of 1, which means that installing other JDKs will replace it as the default. Be sure to use a higher priority if you want Oracle JDK to remain the default.
     $-> sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.7.0_75/bin/java" 1
 6) Correct the file ownership and the permissions of the executables
