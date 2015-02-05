@@ -7,7 +7,7 @@
 * [Maven](http://maven.apache.org/download.cgi) 3.0
 * [ImageMagick](http://www.imagemagick.org/) 6.0
 * Ftp client (already install 14.04)
-* [git](https://github.com/)
+* [Git](https://github.com/)
 * Gzip or anything to unzip (already install 14.04)
 
 ##Installing first requirements
@@ -18,30 +18,22 @@ sudo apt-get update && sudo apt-get upgrade
 ```Shell
 sudo apt-get git install ant maven imagemagick ftp
 ```
-###Testing if imagemagick is working
-```Shell
-convert logo: logo.gif
-identify logo.gif
-display
-```
-###Version check
-```Shell
-ant -version
-java -version
-
-```
-
 
 ##Installing Java SE JFK 1.7.x
 
-1) Download Java SE Development Kit 7u75
-    $-> wget http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-linux-x64.tar.gz
-2) Unzip tar.gz file
-    $-> tar -zxvf jdk-7u75-linux-x64.tar.gz
-3) Create a JDK directory to /usr/lib
-    $-> sudo mkdir -p /usr/lib/jvm
-4) Move to the JDK directory to /usr/lib
-    $-> sudo mv jdk1.7.0_75/ /usr/lib/jvm/
+* Download Java SE 7 JDK [oracle.com](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* Unzip tar.gz file [replace FILENAME with the file you downloaded]
+  ```Shell
+  tar -zxvf FILENAME.tar.gz
+  ```
+* Create a JDK directory to /usr/lib
+  ```Shell
+  sudo mkdir -p /usr/lib/jvm
+  ```
+* Move to the JDK directory to /usr/lib [replace FILENAME with the file you downloaded]
+  ```Shell
+  sudo mv FILENAME/ /usr/lib/jvm/
+  ```
 5) run to install:
 This will assign Oracle JDK a priority of 1, which means that installing other JDKs will replace it as the default. Be sure to use a higher priority if you want Oracle JDK to remain the default.
     $-> sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.7.0_75/bin/java" 1
