@@ -52,16 +52,27 @@ rm cspace-server-4.1.1.tar.gz
 Set up environment variables. Make sure that the following values correspond to your environment:
 
 **CSPACE_JEESERVER_HOME:** The full path to the apache-tomcat-6.0.33 directory that was created when you unpacked the CollectionSpace tarball.
+
 **CATALINA_HOME:** The full path to the apache-tomcat-6.0.33 directory, identical to the value of CSPACE_JEESERVER_HOME.
+
 **CATALINA_PID:** The full path to a file which will hold the Tomcat server process number. This is used by the Tomcat shutdown script.
+
 **CATALINA_OPTS:** Environment options for the Tomcat server process. The recommended options below are Java Virtual Machine (JVM) memory settings which permit allocation of up to 1 GB of RAM to the Java heap and up to 384 MB of RAM for Java Permanent Generation (PermGen) space.
-JAVA_HOME: The full path to your Java directory. If you are unsure where this variable should point to, you can execute this command: readlink -f `which java` and take the part that comes before jre.
+
+**JAVA_HOME:** The full path to your Java directory. If you are unsure where this variable should point to, you can execute this command: readlink -f `which java` and take the part that comes before jre.
+
 **DB_CSADMIN_PASSWORD:** The password for the administrative database user for the CollectionSpace application. This must match the password for that user that you specified while setting up PostgreSQL, via the instructions in PostgreSQL Installation under Linux. (This administrative user by default will be named csadmin, and will be a superuser. However, this user will have fewer privileges than the overall database administrator superuser, by default named postgres.)
+
 **DB_NUXEO_PASSWORD:** Any database-legal password of your choice for the nuxeo database user. This user can work with CollectionSpace data stored in Nuxeo, the content management system underlying CollectionSpace.
+
 **DB_CSPACE_PASSWORD:** Any database-legal password of your choice for the cspace database user. This user can work with CollectionSpace data for users, roles, and access permission.
+
 **DB_READER_PASSWORD:** Any database-legal password of your choice for the reader database user. This user will have read-only access to CollectionSpace data stored in Nuxeo.
+
 **ANT_OPTS:** Environment options for the Apache Ant build tool. The recommended options below are Java Virtual Machine (JVM) memory settings which permit allocation of up to 768 MB of RAM to the Java heap and up to 512 MB of RAM for Java Permanent Generation (PermGen) space.
+
 **MAVEN_OPTS:** Environment options for the Maven build tool. The recommended options below are Java Virtual Machine (JVM) memory settings which permit allocation of up to 768 MB of RAM to the Java heap and up to 512 MB of RAM for Java Permanent Generation (PermGen) space.
+
 
 ```Shell
 export CSPACE_JEESERVER_HOME="/usr/local/share/apache-tomcat-6.0.33"
