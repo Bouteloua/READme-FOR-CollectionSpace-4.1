@@ -5,43 +5,39 @@
 sudo su
 ```
 
-* Go to the directory where you want to install CollectionSpace:
+Go to the directory where you want to install CollectionSpace:
 
 ```Shell
 cd /usr/local/share
 ```
-* Download the tarball via FTP:
+Download the tarball via FTP:
 
 ```Shell
 ftp source.collectionspace.org
 ```
 
-* Log in with the username anonymous and any password. Then:
+Log in with the username anonymous and any password. Then:
 
 ```
 cd pub/collectionspace/releases/4.1.1
 get cspace-server-4.1.1.tar.gz
 exit
 ```
- * Or use gwet
- ```Shell
- wget ftp://source.collectionspace.org/pub/collectionspace/releases/4.1.1/cspace-server-4.1.1.tar.gz
- ```
 
-* Unpack tarball and it will create an apache-tomcat-6.0.33 directory
+Unpack tarball and it will create an apache-tomcat-6.0.33 directory
 
 ```Shell
 tar -zxvof cspace-server-4.1.1.tar.gz
 ```
 
-* Make necessary files executable:
+Make necessary files executable:
 
 ```Shell
 chmod u+x apache-tomcat-6.0.33/bin/*.sh
 ```
 
 
-* Optionally remove the tarball:
+Optionally remove the tarball:
 ```Shell
 rm cspace-server-4.1.1.tar.gz
 ```
