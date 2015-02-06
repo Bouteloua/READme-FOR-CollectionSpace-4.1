@@ -84,3 +84,54 @@ export DB_READER_PASSWORD="your_reader_database_user_password_here"
 export ANT_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 ```
+##Configure your tenant
+Build the Application layer and deploy (copy) your changes to the CollectionSpace server. A first-time build can take approximately 5-10 minutes on a typical system; subsequent builds will be considerably faster:
+
+```Shell
+cd $HOME
+mkdir collectionspace-source
+cd collectionspace-source
+wget https://github.com/collectionspace/application/archive/v4.1.1.tar.gz
+tar -zxvof v4.1.1.tar.gz
+rm v4.1.1.tar.gz
+mv application-4.1.1 application
+cd application
+```
+
+```Shell
+mvn clean install -DskipTests
+```
+
+##Initialize database and users and permissions
+
+```Shell
+cd $HOME/collectionspace-source
+wget https://github.com/collectionspace/services/archive/v4.1.1.tar.gz
+tar -zxvof v4.1.1.tar.gz
+rm v4.1.1.tar.gz
+mv services-4.1.1 services
+cd services
+```
+Enter the following command to build the CollectionSpace Services layer. A first-time build can take approximately 10 minutes on a typical system; subsequent builds will be considerably faster:
+
+```Shell
+clean install -DskipTests
+```
+
+Enter the following command to initialize the CollectionSpace databases and import a default set of users and permissions. This can take approximately 10-15 minutes on a typical system:
+
+```Shell
+ant undeploy deploy create_db -Drecreate_db=true import
+```
+
+
+##Starting the server
+Start the server:
+```Shell
+$CSPACE_JEESERVER_HOME/bin/startup.sh
+```
+
+##Should work now
+```Shell
+http://localhost:8180/collectionspace/ui/lifesci/html/
+```
