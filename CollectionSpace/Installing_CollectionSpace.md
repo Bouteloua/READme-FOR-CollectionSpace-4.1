@@ -48,7 +48,8 @@ rm cspace-server-4.1.1.tar.gz
 
 ## Setting up CollectionSpace
 
-* You need an administrative user account in PostgreSQL that CollectionSpace can use: one that has been granted full privileges and can grant privileges to other users. You can either set up a new user account (recommended), or use the postgres user account that you already set up in the prerequisites section of this page. The values myusername and mypassword, below, should be replaced by the actual username and password of this user.
+You need an administrative user account in PostgreSQL that CollectionSpace can use: one that has been granted full privileges and can grant privileges to other users. You can either set up a new user account (recommended), or use the postgres user account that you already set up in the prerequisites section of this page. The values myusername and mypassword, below, should be replaced by the actual username and password of this user.
+
 Set up environment variables. Make sure that the following values correspond to your environment:
 
 **CSPACE_JEESERVER_HOME:** The full path to the apache-tomcat-6.0.33 directory that was created when you unpacked the CollectionSpace tarball.
