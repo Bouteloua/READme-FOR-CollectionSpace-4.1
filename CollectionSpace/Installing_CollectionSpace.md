@@ -74,6 +74,7 @@ readlink -f `which java`
 **MAVEN_OPTS:** Environment options for the Maven build tool. The recommended options below are Java Virtual Machine (JVM) memory settings which permit allocation of up to 768 MB of RAM to the Java heap and up to 512 MB of RAM for Java Permanent Generation (PermGen) space.
 
 
+
 ```Shell
 export CSPACE_JEESERVER_HOME="/usr/local/share/apache-tomcat-6.0.33"
 export CATALINA_HOME=$CSPACE_JEESERVER_HOME
@@ -87,6 +88,14 @@ export DB_READER_PASSWORD="your_reader_database_user_password_here"
 export ANT_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 ```
+
+Copy this info into environment file and reboot
+
+```Shell
+cd /etc
+vim environment
+```
+
 ##Configure your tenant
 Build the Application layer and deploy (copy) your changes to the CollectionSpace server. A first-time build can take approximately 5-10 minutes on a typical system; subsequent builds will be considerably faster:
 
