@@ -98,6 +98,37 @@ mv application-4.1.1 application
 cd application
 ```
 
+open the pom files
+```Shell
+vim pom.xml
+```
+Change libs-snapshot-local and true to libs-release-local and false 
+
+* comment out
+
+```Shell
+<-- <repository>
+           <id>libs-snapshot-local</id>
+           <name>libs-snapshot-local</name>
+           <url> http://nightly.collectionspace.org:8081/artifactory/libs-snapshot-local</url>
+           <snapshots>
+                   <enabled>true</enabled>
+           </snapshots>
+</repository> -->
+
+* add
+<repository>
+           <id>libs-snapshot-local</id>
+           <name>libs-snapshot-local</name>
+           <url> http://nightly.collectionspace.org:8081/artifactory/libs-release-local</url>
+           <snapshots>
+                   <enabled>false</enabled>
+           </snapshots>
+</repository>
+```
+
+
+
 ```Shell
 mvn clean install -DskipTests
 ```
