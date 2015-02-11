@@ -16,7 +16,7 @@ sudo apt-get update && sudo apt-get upgrade
 ```
 
 ```Shell
-sudo apt-get git install ant maven imagemagick ftp
+sudo apt-get install git ant maven imagemagick ftp
 ```
 
 ##Installing Java SE JFK 1.7.x
