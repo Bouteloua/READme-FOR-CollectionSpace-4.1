@@ -56,7 +56,10 @@ Set up environment variables. Make sure that the following values correspond to 
 
 **CATALINA_OPTS:** Environment options for the Tomcat server process. The recommended options below are Java Virtual Machine (JVM) memory settings which permit allocation of up to 1 GB of RAM to the Java heap and up to 384 MB of RAM for Java Permanent Generation (PermGen) space.
 
-**JAVA_HOME:** The full path to your Java directory. If you are unsure where this variable should point to, you can execute this command: readlink -f ``which java`` and take the part that comes before jre.
+**JAVA_HOME:** The full path to your Java directory. If you are unsure where this variable should point to and take the part that comes before jre.
+```Shell
+readlink -f `which java``
+```
 
 **DB_CSADMIN_PASSWORD:** The password for the administrative database user for the CollectionSpace application. This must match the password for that user that you specified while setting up PostgreSQL, via the instructions in PostgreSQL Installation under Linux. (This administrative user by default will be named csadmin, and will be a superuser. However, this user will have fewer privileges than the overall database administrator superuser, by default named postgres.)
 
