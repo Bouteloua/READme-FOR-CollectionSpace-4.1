@@ -58,7 +58,7 @@ Set up environment variables. Make sure that the following values correspond to 
 
 **JAVA_HOME:** The full path to your Java directory. If you are unsure where this variable should point to and take the part that comes before jre.
 ```Shell
-readlink -f `which java``
+readlink -f `which java`
 ```
 
 **DB_CSADMIN_PASSWORD:** The password for the administrative database user for the CollectionSpace application. This must match the password for that user that you specified while setting up PostgreSQL, via the instructions in PostgreSQL Installation under Linux. (This administrative user by default will be named csadmin, and will be a superuser. However, this user will have fewer privileges than the overall database administrator superuser, by default named postgres.)
