@@ -158,7 +158,7 @@ cd services
 Enter the following command to build the CollectionSpace Services layer. A first-time build can take approximately 10 minutes on a typical system; subsequent builds will be considerably faster:
 
 ```Shell
-clean install -DskipTests
+mvn clean install -DskipTests
 ```
 
 Enter the following command to initialize the CollectionSpace databases and import a default set of users and permissions. This can take approximately 10-15 minutes on a typical system:
